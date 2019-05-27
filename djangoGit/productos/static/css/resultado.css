@@ -1,0 +1,23 @@
+body{
+  background: #45b6a8;
+  color: #4e6150;
+}
+p{
+  color: #fff;
+}
+#centrar{
+  margin: auto;
+  width: 25%;
+}
+#codigo{
+  display: inline-block;
+  width: 24%;
+}
+#nombres{
+  display: inline-block;
+  width: 45%;
+}
+#precio{
+  display: inline-block;
+  width: 24%;
+}

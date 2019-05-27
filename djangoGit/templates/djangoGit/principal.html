@@ -1,0 +1,20 @@
+{% extends "templates/djangoGit/base.html" %}
+{% load static %}
+
+{% block estilos %}
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+{% endblock %}
+{% block titulo %}
+  Principal
+{% endblock %}
+{% block banner %}
+{% endblock %}
+{% block contenido %}
+    <div id="fondo">
+      <div id="layout">
+        <a href="/admin"><button type="button" name="nuevo">Administrar</button></a>
+        <a href="/sumar"><button type="button" name="sumar">Sumar Producto</button></a>
+        <a href="/productos"><button type="button" name="productos">Productos</button></a>
+      </div>
+    </div>
+{% endblock %}

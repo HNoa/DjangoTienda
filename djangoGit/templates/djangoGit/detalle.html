@@ -1,0 +1,31 @@
+{% extends "templates/djangoGit/base.html" %}
+{% load static %}
+
+{% block estilos %}
+  <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+{% endblock %}
+
+{% block titulo %}
+  Detalle
+{% endblock %}
+{% block banner %}
+{% endblock %}
+{% block contenido %}
+  <div id="fondo">
+    <div id="layout">
+      <h3>Lista de Producto</h3>
+      <div id="nombres">
+        <h3>Producto</h3>
+        <hr/>
+      </div>
+      <div id="precios">
+        <h3>Precio</h3>
+        <hr/>
+      </div>
+      <div id="total">
+        <h3>TOTAL: <output name="total">[123456789]</output> </h3>
+      </div>
+      <a href="/principal"><button type="button" name="button">Principal</button> </a>
+    </div>
+  </div>
+{% endblock %}

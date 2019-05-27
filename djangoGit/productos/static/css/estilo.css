@@ -1,0 +1,35 @@
+body, html{
+  border: 0;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+button{
+  display: block;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+hr{
+  background: #000;
+  border-color: #fff;
+  height: 3px;
+}
+#fondo{
+  background-image: url("imagenes/tiendaUnoBlack.jpg");
+  height: 550px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+#layout{
+  margin: 0 auto;
+}
+#nombres{
+  display: inline-block;
+  width: 65%;
+}
+#precios{
+  display: inline-block;
+  width: 33%;
+}

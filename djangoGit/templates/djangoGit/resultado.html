@@ -1,0 +1,39 @@
+{% extends "templates/djangoGit/base.html" %}
+{% load static %}
+
+{% block estilos %}
+  <link rel="stylesheet" href="{% static 'css/resultado.css' %}">
+{% endblock %}
+
+{% block titulo %}
+  Productos
+{% endblock %}
+{% block banner %}
+  <h1>Productos</h1>
+{% endblock %}
+{% block contenido %}
+  <div id="codigo">
+    <h3>Código</h3>
+    <hr/>
+    {% for objeto in productos %}
+      <p>{{objeto.id_Producto}}</p>
+    {% endfor %}
+  </div>
+  <div id="nombres">
+    <h3>Nombre</h3>
+    <hr/>
+    {% for objeto in productos %}
+      <p>{{objeto.nombre}}</p>
+    {% endfor %}
+  </div>
+  <div id="precio">
+    <h3>Precio</h3>
+    <hr/>
+    {% for objeto in productos %}
+      <p>{{objeto.precio}}</p>
+    {% endfor %}
+  </div>
+  <div id="centrar">
+    <a href="/principal"><button type="button" name="principal">Principal</button></a>
+  </div>
+{% endblock %}

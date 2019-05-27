@@ -1,0 +1,122 @@
+{% extends "templates/djangoGit/base.html" %}
+{% load static %}
+
+{% block estilos %}
+  <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+{% endblock %}
+
+{% block titulo %}
+  Sumar
+{% endblock %}
+{% block banner %}
+{% endblock %}
+{% block contenido %}
+
+  <script type="text/javascript">
+
+    var productos = [
+    "aceitunas",
+    "atun",
+    "durazno en lata",
+    "sardina",
+    "galleta cracker",
+    "club social",
+    "oreo",
+    "chips ahoy",
+    "leche",
+    "leche evaporada",
+    "leche en polvo",
+    "mermelada",
+    "fideo",
+    "fideo spaghetti",
+    "fideo tallarin",
+    "café",
+    "jamon",
+    "mortadela",
+    "chorizo",
+    "salchicha",
+    "mantequilla",
+    "crema de mani",
+    "dulce de leche",
+    "gelatina",
+    "yogurt",
+    "pilfrut",
+    "sublime",
+    "bon o bon",
+    "chocolate m&m",
+    "halls",
+    "beldent",
+    ];
+    var precios = [
+    10,
+    19,
+    19,
+    10,
+    27,
+    12,
+    11,
+    14,
+    6,
+    12,
+    45,
+    25,
+    5,
+    6,
+    6,
+    5,
+    14,
+    34,
+    32,
+    25,
+    14,
+    23,
+    10,
+    2,
+    15,
+    1,
+    4,
+    1,
+    9,
+    3,
+    4
+    ];
+    var total = 0;
+    var precio = 0;
+    function limpiar(){
+      document.getElementById('nombre').value = "";
+      document.getElementById('precio').value = "";
+    }
+    function completaPrecio(){
+      var nombre = document.getElementById('nombre').value;
+      for (var i = 0; i < 31; i++){
+        if(productos[i] == nombre){
+          document.getElementById('precio').value = precios[i];
+          break;
+        }
+      }
+    }
+    function aniadir(){
+      var nombre = document.getElementById('nombre').value;
+      precio = document.getElementById('precio').value;
+
+      total = total + parseInt(precio);
+
+      document.getElementById('total').value = total;
+
+      limpiar()
+    }
+  </script>
+
+  <div id="fondo">
+    <div id="layout">
+      <h3>TOTAL</h3>
+      <input type="text" id="total" value="">
+      <p>Nombre: </p>
+      <input type="text" id="nombre" value="" onchange="completaPrecio()">
+      <p>Precio: </p>
+      <input type="text" id="precio" value="">
+      <button type="button" id="limpiar" onclick="aniadir()">Añadir</button>
+      <a href="/principal"><button type="button" name="detalle">Principal</button></a>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+body{
+  background: orange;
+  color: #cbe5e9;
+  margin: 0;
+}
+p{
+  color: #fff;
+}
+#fondo{
+  background-image: url("imagenes/tiendaUnoBlack.jpg");
+  height: 550px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
